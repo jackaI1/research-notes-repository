@@ -1,0 +1,5 @@
+title,date,body,tags
+Pre-clean comparison plan,2026-10-12,"Compare the standard solvent clean with the plasma clean on the same batch of four substrates. Record particle counts before and after each clean.",process
+Sensor cable repaired,2026-10-13,"The loose sensor cable was re-seated. The repeat run gave a thickness reading within the expected range, so the earlier outlier looks like a cable fault and not a process problem.",measurement
+Holder swap trial,2026-10-15,"A new substrate holder was tried. Thickness variation between runs dropped, which supports the idea that the old holder was the main source of spread.",measurement
+Fume cabinet check,2026-10-16,"Checked the fume extraction flow before the next run. Flow was normal. The isopropyl wipes have been moved to the cabinet on the left wall.",safety

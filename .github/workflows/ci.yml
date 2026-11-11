@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -v
+      - name: Smoke test the command line on the seed notes
+        run: |
+          python -m notes_repo --db "$RUNNER_TEMP/ci.db" import seed/notes
+          python -m notes_repo --db "$RUNNER_TEMP/ci.db" search "gowning"
+          python -m notes_repo --db "$RUNNER_TEMP/ci.db" draft graphene-coating-study
+          python -m notes_repo --db "$RUNNER_TEMP/ci.db" approve 1 --drop-flagged
+          python -m notes_repo --db "$RUNNER_TEMP/ci.db" index graphene-coating-study --out "$RUNNER_TEMP/site"
