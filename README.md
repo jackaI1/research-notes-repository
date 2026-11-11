@@ -115,7 +115,7 @@ Run the tests with `python -m pytest -v`. Locally, 48 tests pass on Python 3.9. 
 - the unsupported flag: an invented claim is flagged, a claim with no source is flagged, approval is refused until I choose, and "drop" and "keep" do what they say
 - importers and Excel: duplicate notes are skipped on a second import, bad rows are reported and not stored, and the Excel export counts match the database
 
-GitHub Actions runs the same tests on Python 3.9 and 3.12 for every push and pull request, then runs the command line on the seed notes from start to finish.
+GitHub Actions runs the same tests on Python 3.11 and 3.12 for every push and pull request, then runs the command line on the seed notes from start to finish.
 
 ## Limitations
 
