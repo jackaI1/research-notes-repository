@@ -1,0 +1,17 @@
+{
+  "description": "Controlled tag list. Authors may write these tags in a note's tags field; words in the note text also add a tag when a keyword matches at the start of a word.",
+  "tags": {
+    "pain-point": ["pain point", "frustrat", "annoy", "hard to", "struggl", "problem with"],
+    "cost": ["cost", "price", "expensive", "budget", "cheaper"],
+    "process": ["workflow", "procedure", "step by step", "process"],
+    "measurement": ["measure", "sensor", "reading", "calibrat", "metrology"],
+    "coating": ["coating", "coat ", "film", "deposit"],
+    "cleanroom": ["cleanroom", "clean room", "particle", "contamination"],
+    "safety": ["safety", "hazard", "ppe", "fume"],
+    "supplier": ["supplier", "vendor", "quote"],
+    "data-quality": ["outlier", "missing data", "noisy", "repeat run"],
+    "decision": ["decided", "decision", "agreed", "we will"],
+    "follow-up": ["follow up", "follow-up", "next step", "action item"],
+    "interview": ["interview", "interviewee", "participant"]
+  }
+}
